@@ -7,7 +7,7 @@ import HttpError from '../helpers/HttpError.js';
 dotenv.config();
 const { SECRET_KEY } = process.env;
 
-const isTokenValid = async (req, res, next) => {
+export const isTokenValid = async (req, res, next) => {
   const { authorization = '' } = req.headers;
   const [bearer, token] = authorization.split(' ');
 
@@ -28,4 +28,4 @@ const isTokenValid = async (req, res, next) => {
   }
 };
 
-export default isTokenValid;
+

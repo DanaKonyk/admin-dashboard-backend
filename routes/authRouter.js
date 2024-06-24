@@ -1,6 +1,6 @@
 import express from 'express';
 import { isBodyValid } from '../middlewares/isBodyValid.js';
-import isTokenValid from '../middlewares/isTokenValid.js';
+import {isTokenValid} from '../middlewares/isTokenValid.js';
 import { registerSchema } from '../schemas/userSchemas.js';
 import ctrl from '../controllers/authControllers.js';
 
