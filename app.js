@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 
 import authRouter from './routes/authRouter.js';
 import customersRouter from './routes/customerRouter.js';
+import incomeRouter from './routes/incomeRouter.js';
 
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use('/api/users', authRouter);
 app.use('/api/customers', customersRouter);
+app.use('/api/income', incomeRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: 'Route not found' });
