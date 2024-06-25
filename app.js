@@ -9,6 +9,7 @@ import incomeRouter from './routes/incomeRouter.js';
 import orderRouter from './routes/orderRouter.js';
 import productsRouter from './routes/productRouter.js';
 import suppliersRouter from './routes/supplierRouter.js';
+import dashboardRouter from './routes/dashboardRouter.js';
 
 dotenv.config();
 const app = express();
@@ -23,6 +24,7 @@ app.use('/api/income', incomeRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/products', productsRouter);
 app.use('/api/suppliers', suppliersRouter);
+app.use('/api/dashboard', dashboardRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: 'Route not found' });
