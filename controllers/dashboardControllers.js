@@ -5,17 +5,17 @@ import { Supplier } from '../models/supplier.js';
 import { ctrlWrapper } from '../helpers/ctrlWrapper.js';
 
 const getDashboardData = async (_, res) => {
-  const allSCustomers = await Customer.countDocuments();
-  const allSProducts = await Product.countDocuments();
+  const allCustomers = await Customer.countDocuments();
+  const allProducts = await Product.countDocuments();
   const allSuppliers = await Supplier.countDocuments();
   const recentCustomers = await (
     await Customer.find()
-  ).splice(allSCustomers - 5, allSCustomers);
+  ).splice(allCustomers - 5, allCustomers);
   const incomeExpences = await Income.find();
 
   res.json({
-    allSCustomers,
-    allSProducts,
+    allCustomers,
+    allProducts,
     allSuppliers,
     recentCustomers,
     incomeExpences,
