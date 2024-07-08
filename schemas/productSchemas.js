@@ -38,5 +38,5 @@ export const updateProductSchema = Joi.object({
   suppliers: Joi.string(),
   stock: Joi.number(),
   price: Joi.number(),
-  cactegory: Joi.string(),
+  category: Joi.string(),
 });
