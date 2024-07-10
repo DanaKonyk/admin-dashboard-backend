@@ -6,6 +6,7 @@ import ctrl from '../controllers/authControllers.js';
 
 const authRouter = express.Router();
 
+authRouter.post('/register', isBodyValid(loginSchema), ctrl.register);
 authRouter.post('/login', isBodyValid(loginSchema), ctrl.login);
 authRouter.post('/logout', isTokenValid, ctrl.logout);
 authRouter.get('/current', isTokenValid, ctrl.getCurrent);
