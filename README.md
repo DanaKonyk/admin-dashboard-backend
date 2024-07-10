@@ -44,7 +44,6 @@ are the key functionalities and endpoints that the API will provide.
 
 ### Authentication and Authorization
 
-- **POST** `/api/user/login`: Add user credentials.
 - **POST** `/api/user/login`: Validate and authenticate user credentials.
 - **GET** `/api/user/logout`: End the user session.
 - **GET** `/api/user/user-info`: Return user's name and email.
